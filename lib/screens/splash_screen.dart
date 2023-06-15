@@ -14,10 +14,11 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
   void initState() {
     super.initState();
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
-    Future.delayed(Duration(seconds: 3),(){
+    Future.delayed(const Duration(seconds: 5),(){
       Navigator.of(context).pushReplacement(MaterialPageRoute(
-          builder: (_) => const HomeScreen();
-      ));
+          builder: (_) => const HomeScreen(),
+      ),
+      );
     });
   }
   @override
